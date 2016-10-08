@@ -38,5 +38,6 @@
     <modules>
         <module>spring-cloud-workshop-config-server</module>
         <module>spring-cloud-workshop-blank-service</module>
+        <module>spring-cloud-workshop-service-discovery</module>
     </modules>
 </project>
