@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: blank
+  cloud:
+    config:
+      uri: http://localhost:8888/ # todo use dns name
