@@ -44,4 +44,14 @@
             <artifactId>spring-boot-actuator</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.4.1.RELEASE</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
