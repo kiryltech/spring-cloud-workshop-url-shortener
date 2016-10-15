@@ -8,23 +8,19 @@
         <artifactId>spring-cloud-workshop</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>spring-cloud-workshop-blank-service</artifactId>
+    <artifactId>spring-cloud-workshop-url-shortener-backend</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>spring-cloud-workshop-blank-service</name>
+    <name>Spring Cloud Workshop :: URL Shortener Backend</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>org.kduborenko.BackendApplication</start-class>
     </properties>
-
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.kduborenko</groupId>
+            <artifactId>spring-cloud-workshop-url-shortener-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,7 +28,16 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator</artifactId>
+        </dependency>
     </dependencies>
+
 </project>

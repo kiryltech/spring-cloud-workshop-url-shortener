@@ -10,10 +10,11 @@
     </parent>
     <artifactId>spring-cloud-workshop-service-discovery</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>spring-cloud-workshop-service-discovery</name>
+    <name>Spring Cloud Workshop :: Service Discovery Server</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>org.kduborenko.ServiceDiscoveryServer</start-class>
     </properties>
 
     <dependencies>

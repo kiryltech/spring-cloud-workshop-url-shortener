@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: url-shortener-frontend
+  cloud:
+    config:
+      uri: http://localhost:8888/ # todo use dns name

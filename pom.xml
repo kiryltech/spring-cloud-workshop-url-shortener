@@ -15,7 +15,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>spring-cloud-workshop</name>
+    <name>Spring Cloud Workshop</name>
 
     <dependencyManagement>
         <dependencies>
@@ -37,7 +37,9 @@
 
     <modules>
         <module>spring-cloud-workshop-config-server</module>
-        <module>spring-cloud-workshop-blank-service</module>
         <module>spring-cloud-workshop-service-discovery</module>
+        <module>spring-cloud-workshop-url-shortener-api</module>
+        <module>spring-cloud-workshop-url-shortener-backend</module>
+        <module>spring-cloud-workshop-url-shortener-frontend</module>
     </modules>
 </project>
