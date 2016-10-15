@@ -6,6 +6,7 @@ _TDB_
 
 * JDK 1.8 or higher
 * Maven 3.0 or higher
+* Redis 3.0 or higher
 * Docker 1.12 or higher
 
 # Build and Install
@@ -52,10 +53,54 @@ _TDB_
 
 ## Deployment of local instances
 
+* Create configuration repository:
+    
+    * Create directory:
+        
+        ```sh
+        $ cd ~ && mkdir config-repo
+        ```
+        
+    * Initialize git repository:
+    
+        ```sh
+        $ cd config-repo && git init
+        ```
+        
+    * Create default application config:
+    
+        ```sh
+        $ touch application.yml
+        ```
+        
+        With content
+        
+        ```yaml
+        eureka:
+         client:
+           serviceUrl:
+             defaultZone: http://localhost:8761/eureka/
+        ```
+       
+    * Create Backend specific configuration file:
+    
+        ```sh
+        $ touch application.yml
+        ```
+       
+        With content
+       
+        ```yaml
+        redis:
+          connection:
+            host: 172.17.0.2 # Replace by address of your Redis instance
+        ```
+
 * Run Configuration Server:
     
     ```sh
-    $ java -jar spring-cloud-workshop-config-server/target/spring-cloud-workshop-config-server-1.0-SNAPSHOT.jar
+    $ java -jar spring-cloud-workshop-config-server/target/spring-cloud-workshop-config-server-1.0-SNAPSHOT.jar \
+        --spring.cloud.config.server.git.uri=file://$HOME/config-repo
     ```
 
 * Run Service Discovery Server:
