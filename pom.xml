@@ -44,7 +44,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <docker.image.prefix>spring-cloud-workshop</docker.image.prefix>
+        <docker.image.prefix>url-shortener</docker.image.prefix>
     </properties>
 
     <modules>
