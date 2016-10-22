@@ -1,5 +1,6 @@
 package org.kduborenko;
 
+import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -16,6 +17,11 @@ import javax.servlet.Filter;
 @EnableEurekaClient
 @EnableFeignClients
 public class FrontendApplication {
+
+    @Bean
+    Logger.Level feignLoggerLevel() {
+        return Logger.Level.FULL;
+    }
 
     @Bean
     public Filter logFilter() {

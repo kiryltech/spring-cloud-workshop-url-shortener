@@ -43,7 +43,7 @@ _TDB_
     
 * (Optional) Build Docker images
 
-    _TDB_
+    Builds automatically on Maven's install stage.
     
 # Run application
 
@@ -120,3 +120,30 @@ _TDB_
     ```sh
     $ java -jar spring-cloud-workshop-url-shortener-frontend/target/spring-cloud-workshop-url-shortener-frontend-1.0-SNAPSHOT.jar 
     ```
+
+## Deployment of local instances with docker
+
+Run deploy-all.sh script:
+
+    ```sh
+    $ ./src/main/script/deploy-all.sh [url to config repository]
+    ```
+    
+Output will look like:
+    
+    ```
+    Starting Redis
+    4bb7f3e9127561157b3a513e8c3ccc63ab025406318f217bc09cd768be859a27
+    Starting Service Discovery Server
+    863dab148fd3786ab341badb7a255d35eaccb312b3cd582ce0e88ace67a9ea27
+    Starting Configuration Server
+    a342660ead5d2064d8c771979042af3f1a699b2882af64125f190bada75de625
+    Waiting for Configuration Server...........
+    Starting URL Shortener Backend Server
+    71621b2a4eab5748ce1bd6f7ce0f7437c7acfdef62edb207e0a897a6baa28016
+    Starting URL Shortener Frontend Server
+    67cfe0edeac48d70c5e557e77314c07f3927b9c4e5c8155ec7d213437a04cc76
+    ```
+    
+Frontend server will be available by following url: [http://localhost:8080/create](http://localhost:8080/create)    
+    
