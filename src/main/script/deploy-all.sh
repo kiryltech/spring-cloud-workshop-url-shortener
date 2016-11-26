@@ -22,14 +22,6 @@ docker run -d \
         --name spring-cloud-workshop-config-server \
         url-shortener/spring-cloud-workshop-config-server --spring.cloud.config.server.git.uri=$config_repo
 
-echo -n "Waiting for Configuration Server"
-
-until $(curl --output /dev/null --connect-timeout 1 --silent --head --fail http://172.17.0.4:8888/info); do
-    printf '.'
-    sleep 1
-done
-echo
-
 echo "Starting URL Shortener Backend Server"
 
 docker run -d \
