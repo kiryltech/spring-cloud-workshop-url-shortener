@@ -1,4 +1,4 @@
-package org.kduborenko;
+package net.duborenko;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 

@@ -1,4 +1,4 @@
-package org.kduborenko;
+package net.duborenko;
 
 import feign.Logger;
 import org.springframework.boot.SpringApplication;
