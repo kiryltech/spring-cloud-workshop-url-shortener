@@ -1,6 +1,6 @@
 # Overview
 
-This is a very simple implementation of URL Sortener service created for studying purposes. It demostrates microservices architecture based on [Spring Cloud framework](http://cloud.spring.io/).
+This is a very simple implementation of URL Shortener service created for educational purposes. It demonstrates microservices architecture based on [Spring Cloud Framework](http://cloud.spring.io/).
 
 # Requirements
 
@@ -85,7 +85,7 @@ This is a very simple implementation of URL Sortener service created for studyin
     * Create Backend specific configuration file:
     
         ```sh
-        $ touch application.yml
+        $ touch url-shortener-backend.yml
         ```
        
         With content
@@ -118,8 +118,9 @@ This is a very simple implementation of URL Sortener service created for studyin
 * Run URL Shortener Frontend:
 
     ```sh
-    $ java -jar spring-cloud-workshop-url-shortener-frontend/target/spring-cloud-workshop-url-shortener-frontend-1.0-SNAPSHOT.jar 
+    $ java -jar spring-cloud-workshop-url-shortener-frontend/target/spring-cloud-workshop-url-shortener-frontend-1.0-SNAPSHOT.jar --server.port=9090
     ```
+    Frontend server will be available by following url: [http://localhost:9090/create](http://localhost:9090/create)
 
 ## Deployment of local instances with docker
 
