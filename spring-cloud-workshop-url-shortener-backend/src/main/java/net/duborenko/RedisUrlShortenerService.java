@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
@@ -32,7 +34,7 @@ public class RedisUrlShortenerService implements UrlShortenerService {
     }
 
     @Override
-    public String create(@RequestParam("url") String url) {
+    public String create(@RequestBody String url) {
         String shortId = generateShortId();
         shortIdOps.put(shortId, url);
         return shortId;
