@@ -53,6 +53,16 @@ This is a very simple implementation of URL Shortener service created for educat
 
 ## Deployment of local instances
 
+* Setup Redis DB.
+
+    * You can download and install Redis locally as described in official documentation: https://redis.io/topics/quickstart
+
+    * Or you can use following command to run Redis in a Docker container:
+
+        ```sh
+        $ docker run -p 6379:6379 redis
+        ```
+
 * Create configuration repository:
     
     * Create directory:
@@ -93,7 +103,7 @@ This is a very simple implementation of URL Shortener service created for educat
         ```yaml
         redis:
           connection:
-            host: 172.17.0.2 # Replace by address of your Redis instance
+            host: localhost
         ```
 
 * Run Configuration Server:
