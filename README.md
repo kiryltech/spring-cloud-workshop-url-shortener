@@ -101,8 +101,8 @@ This is a very simple implementation of URL Shortener service created for educat
         With content
        
         ```yaml
-        redis:
-          connection:
+        spring:
+          redis:
             host: localhost
         ```
 
