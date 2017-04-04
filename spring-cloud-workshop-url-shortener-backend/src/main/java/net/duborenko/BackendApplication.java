@@ -30,21 +30,6 @@ public class BackendApplication {
         return filter;
     }
 
-    @Bean
-    public RedisConnectionFactory jedisConnectionFactory(@Value("${redis.connection.host:localhost}") String host) {
-        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-        jedisConnectionFactory.setHostName(host);
-        jedisConnectionFactory.setUsePool(true);
-        return jedisConnectionFactory;
-    }
-
-    @Bean
-    public RedisTemplate redisTemplate(@Autowired RedisConnectionFactory redisConnectionFactory) {
-        RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(redisConnectionFactory);
-        return redisTemplate;
-    }
-
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
     }
